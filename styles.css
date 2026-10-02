@@ -156,7 +156,8 @@ p{ margin:0 0 1em; }
 }
 
 /* ===== Карточки «с чем работаю» ===== */
-.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.cards{ display:flex; flex-wrap:wrap; justify-content:center; gap:18px; }
+.cards > .card{ flex:0 1 calc((100% - 36px) / 3); }
 .card{
   background:var(--white); border:1px solid var(--line); border-radius:var(--r-m);
   padding:26px 24px; box-shadow:var(--shadow-s);
@@ -339,7 +340,7 @@ body.no-scroll{ overflow:hidden; }
 
 /* ===== Адаптив ===== */
 @media (max-width:1000px){
-  .cards{ grid-template-columns:repeat(2,1fr); }
+  .cards > .card{ flex-basis:calc((100% - 18px) / 2); }
   .steps{ grid-template-columns:repeat(2,1fr); }
   .contacts__info{ grid-template-columns:1fr; gap:16px; }
 }
@@ -378,7 +379,7 @@ body.no-scroll{ overflow:hidden; }
 @media (max-width:600px){
   body{ font-size:16px; }
   .container,.container--narrow{ width:calc(100% - 32px); }
-  .cards{ grid-template-columns:1fr; }
+  .cards > .card{ flex-basis:100%; }
   .steps{ grid-template-columns:1fr; }
   .step{ padding:24px 22px; }
   .hero{ padding-top:calc(var(--header-h) + 34px); }
