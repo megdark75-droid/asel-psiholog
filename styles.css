@@ -199,27 +199,19 @@ p{ margin:0 0 1em; }
 .privacy .ic{ color:var(--sage); width:26px; height:26px; }
 .privacy p{ margin:0; font-size:15px; color:#4F5A4C; }
 
-/* ===== Стоимость ===== */
-.section--price{ background:var(--white); }
-.price-card{
-  position:relative; max-width:480px; margin-inline:auto; text-align:center;
+/* ===== Консультация ===== */
+.section--session{ background:var(--white); }
+.session-card{
+  position:relative; max-width:560px; margin-inline:auto; text-align:center;
   background:var(--cream); border:1px solid var(--line); border-radius:var(--r-l);
-  padding:46px 34px 34px; box-shadow:var(--shadow-m);
+  padding:38px 34px 34px; box-shadow:var(--shadow-m);
 }
-.price-card__badge{
-  position:absolute; top:-15px; left:50%; transform:translateX(-50%);
-  background:var(--sage); color:#fff; font-size:13px; font-weight:600;
-  padding:7px 20px; border-radius:999px; white-space:nowrap; box-shadow:0 6px 16px rgba(140,156,138,.35);
-}
-.price-card h3{ margin-bottom:22px; }
-.price-card__list{ display:grid; gap:12px; margin-bottom:26px; }
-.price-card__list li{ display:flex; align-items:center; justify-content:center; gap:10px; font-size:15.5px; color:var(--ink-soft); }
-.price-card__list .ic{ color:var(--sage); width:20px; height:20px; }
-.price-card__sum{
-  font-family:var(--head); font-size:clamp(42px,6vw,58px); font-weight:700; color:var(--rose-dark);
-  margin:0 0 26px; line-height:1;
-}
-.price-card__sum span{ font-size:.55em; }
+.session-card h3{ margin-bottom:22px; }
+.session-card__list{ display:grid; gap:12px; margin-bottom:22px; }
+.session-card__list li{ display:flex; align-items:center; justify-content:center; gap:10px; font-size:15.5px; color:var(--ink-soft); }
+.session-card__list .ic{ color:var(--sage); width:20px; height:20px; }
+.session-card__note{ color:var(--ink-soft); font-size:15.5px; margin:0 0 26px; }
+.session-card__btns{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 
 /* ===== FAQ ===== */
 .faq{ display:grid; gap:12px; }
@@ -332,9 +324,6 @@ a.info-item__val:hover{ color:var(--rose-dark); }
 .modal__close:hover{ background:var(--rose-soft); color:var(--rose-dark); }
 .modal__close svg{ width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; }
 .modal__text{ color:var(--ink-soft); font-size:15.5px; margin-bottom:1.2em; }
-.modal__prices{ display:flex; align-items:baseline; justify-content:center; gap:14px; margin-bottom:1.3em; }
-.modal__prices s{ font-size:19px; color:#A3948C; }
-.modal__prices strong{ font-family:var(--head); font-size:42px; font-weight:700; color:var(--rose-dark); line-height:1; }
 .modal__note{ margin:14px 0 0; font-size:12.5px; color:#9C8E86; }
 body.no-scroll{ overflow:hidden; }
 
@@ -386,8 +375,8 @@ body.no-scroll{ overflow:hidden; }
   .logo{ font-size:20px; }
   .btn{ padding:14px 24px; font-size:15px; }
   .hero__btns .btn{ width:100%; }
-  .price-card{ padding:42px 22px 28px; }
-  .price-card__badge{ font-size:12px; padding:6px 14px; }
+  .session-card{ padding:32px 22px 28px; }
+  .session-card__btns{ grid-template-columns:1fr; }
   .privacy{ flex-direction:column; text-align:center; gap:10px; }
   .footer__inner{ flex-direction:column; text-align:center; }
   .fab{ right:16px; bottom:16px; width:54px; height:54px; }
