@@ -268,6 +268,17 @@ p{ margin:0 0 1em; }
 a.info-item__val:hover{ color:var(--rose-dark); }
 .info-item__hint{ display:block; font-size:13px; color:#9C8E86; margin-top:3px; }
 
+.tg-channel{
+  display:flex; align-items:center; gap:18px; max-width:720px; margin:36px auto 0;
+  padding:22px 26px; border-radius:var(--r-m);
+  background:var(--white); border:1px solid var(--line); box-shadow:var(--shadow-s);
+}
+.tg-channel__ic{ width:42px; height:42px; flex-shrink:0; color:#4C87A8; }
+.tg-channel__text{ flex:1 1 auto; }
+.tg-channel__title{ margin:0 0 4px; font-weight:600; font-size:17px; }
+.tg-channel__desc{ margin:0; font-size:14.5px; color:var(--ink-soft); line-height:1.5; }
+.tg-channel .btn{ flex-shrink:0; }
+
 /* ===== Подвал ===== */
 .footer{ background:var(--ink); color:#E8DED7; padding:34px 0; }
 .footer__inner{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
@@ -332,6 +343,8 @@ body.no-scroll{ overflow:hidden; }
   .cards > .card{ flex-basis:calc((100% - 18px) / 2); }
   .steps{ grid-template-columns:repeat(2,1fr); }
   .contacts__info{ grid-template-columns:1fr; gap:16px; }
+  .tg-channel{ flex-wrap:wrap; justify-content:center; text-align:center; }
+  .tg-channel__text{ flex-basis:100%; }
 }
 
 @media (max-width:860px){
@@ -376,6 +389,8 @@ body.no-scroll{ overflow:hidden; }
   .btn{ padding:14px 24px; font-size:15px; }
   .hero__btns .btn{ width:100%; }
   .session-card{ padding:32px 22px 28px; }
+  .tg-channel{ flex-direction:column; text-align:center; gap:14px; padding:24px 20px; }
+  .tg-channel .btn{ width:100%; }
   .session-card__btns{ grid-template-columns:1fr; }
   .privacy{ flex-direction:column; text-align:center; gap:10px; }
   .footer__inner{ flex-direction:column; text-align:center; }
